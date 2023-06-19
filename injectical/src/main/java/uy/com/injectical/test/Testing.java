@@ -11,10 +11,9 @@ public class Testing {
 
 	public static void main(String [] args) throws SQLException  {
 		
-		DbConnection conn;
 		try {
 			EventoDao evDao = new EventoDao(DbConnection.getInstance());
-			evDao.getEvento().forEach((evento) -> System.out.println(evento));
+			evDao.getEventos().forEach((evento) -> System.out.println(evento.getName()));
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
