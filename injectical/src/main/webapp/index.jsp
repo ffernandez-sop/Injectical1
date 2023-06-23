@@ -8,30 +8,40 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="favicon.ico">
-<title>Departamento de Recursos Humanos - My Company</title>
+<title>Sport360</title>
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="css/justified-nav.css" rel="stylesheet">
+<link href="css/css.css" rel="stylesheet">
 
 </head>
 
 <body>
 
 	<div class="container">
+		<div class="masthead">
+			<h3 class="text-muted">Sport 360</h3>
+			<nav>
+				<ul class="nav nav-justified">
+					<li><a href="homepage">Inicio</a></li>
+					<li><a href="admin?action=login">Administración</a></li>
+					<li><a href="acerca.jsp">Acerca</a></li>
+				</ul>
+			</nav>
+		</div>
 
-		<!-- Example row of columns -->
 		<div class="row">
 
 			<c:forEach items="${allEventos}" var="evento" varStatus="status">
 				<div class="col-lg-4">
-					<h3>Evento: [${evento.id}]</h3>
-					<p class="text-danger">${evento.name}</p>
-					<p>
-					    <a class="btn btn-primary"
-							href="vacante?action=ver&id=${vacante.id}" role="button">Ver
-							Detalles&raquo;</a>
-					</p>
+					<h4>${evento.name}</h3>
+						<p class="text-danger">${evento.discipline.name}</p>
+						<p>
+							<a class="btn btn-primary"
+								href="vacante?action=ver&id=${vacante.id}" role="button">Ver
+								Detalles&raquo;</a>
+						</p>
 				</div>
 			</c:forEach>
 

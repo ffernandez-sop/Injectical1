@@ -15,7 +15,7 @@ import uy.com.injectical.entity.Evento;
 
 public class EventoDao {
 
-	private static final String SQL_ALL_EVENTS_DISCIPLINE = "SELECT * FROM evento_disciplina";
+	private static final String SQL_ALL_EVENTS_DISCIPLINE = "SELECT * FROM evento_disciplina order by fecha_inicio desc limit 6;";
 	private static final String SQL_DETAILS = "SELECT * FROM evento_detalle where id_evento = ?";
 
 	private DbConnection conn;
