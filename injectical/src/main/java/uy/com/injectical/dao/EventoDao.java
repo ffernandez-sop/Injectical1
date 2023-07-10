@@ -24,7 +24,7 @@ public class EventoDao {
 		this.conn = conn;
 	}
 
-	public Collection<Evento> getEventos() throws SQLException, IOException {
+	public Collection<Evento> getEventosLimitSix() throws SQLException, IOException {
 		Collection<Evento> result = new ArrayList<>();
 		conn.setPropertiesConnection();
 		PreparedStatement ps = conn.getConn().prepareStatement(SQL_ALL_EVENTS_DISCIPLINE);

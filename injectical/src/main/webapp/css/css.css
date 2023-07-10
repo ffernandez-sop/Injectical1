@@ -1,2 +1,14 @@
-.col-lg-4{border: 1px solid #d0d0d0;margin: 5px}
-.row{margin-top: 10px}
+body{font-family: sans-serif;margin: 0;}
+a{text-decoration: none;color: white; background:#b6d3e3;border-radius: 5px;padding: 5px }
+.btn-primary {color: #fff; background-color: #337ab7; border-color: #2e6da4}
+.event_conteiner { justify-content: center; display: grid;}
+.main_container {margin-top: 10px;}
+header{ display: flex;justify-content: space-between;min-height: 65px; background: #0469a2;align-items: center;padding: 10px}
+nav a{font-weight: 600; padding-right: 10px;}
+nav a:hover {color:#0469a2;}
+
+
+@media (max-width: 700px) {
+	header{flex-direction: column;}
+	nav{padding: 10px;}
+}

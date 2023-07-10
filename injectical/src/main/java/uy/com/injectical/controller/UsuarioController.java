@@ -38,7 +38,7 @@ public class UsuarioController extends HttpServlet {
 		EventoDao eventoDao = new EventoDao(DbConnection.getInstance());
 		Collection<Evento> lista =new ArrayList<>();
 		try {
-			lista = eventoDao.getEventos();
+			lista = eventoDao.getEventosLimitSix();
 		} catch (SQLException | IOException e) {
 			e.printStackTrace();
 		}
